@@ -1,9 +1,9 @@
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 
-import LaunchScreen from '../Containers/LaunchScreen'
+import CoinPairScreen from '../Containers/CoinPairScreen'
 
-import LaunchScreen2 from '../Containers/LaunchScreen2'
+
 
 import styles from './Styles/NavigationStyles'
 
@@ -11,12 +11,11 @@ import styles from './Styles/NavigationStyles'
 
 // Manifest of possible screens
 const PrimaryNav = createStackNavigator({
-    LaunchScreen: { screen: LaunchScreen },
-    LaunchScreen2: {screen: LaunchScreen2}
+    CoinPairScreen: { screen: CoinPairScreen },
 }, {
     // Default config for all screens
     headerMode: 'none',
-    initialRouteName: 'LaunchScreen',
+    initialRouteName: 'CoinPairScreen',
     navigationOptions: {
         headerStyle: styles.header
     }
