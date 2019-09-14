@@ -5,7 +5,7 @@ export default StyleSheet.create({
         flex: 1,
         borderRightColor: Colors.colorPrimary,
         borderTopWidth: 0.5,
-        backgroundColor: '#31432e',
+        backgroundColor: Colors.colorPrimaryDarker,
         paddingTop: 7,
         paddingBottom: 16
     }

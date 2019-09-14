@@ -4,6 +4,8 @@ import {Col, Row, Grid} from "react-native-easy-grid";
 import {Icon} from 'native-base';
 import {Colors, Metrics, Fonts} from '../Themes'
 import TradingBookItemBuy from "./TradingBookItemBuy";
+import TradingBookItemSell from "./TradingBookItemSell";
+import VerticalDivier from "./VerticalDivider";
 
 export default class TradingBook extends Component {
 
@@ -13,12 +15,13 @@ export default class TradingBook extends Component {
                 flex: 1,
             }}>
                 <Grid style={{
-                    paddingTop: 7,
+                    paddingTop: 15,
                     backgroundColor: Colors.colorPrimaryDarker,
-                    paddingBottom: 5,
+                    paddingBottom: 12,
                 }}>
                     <Row>
                         <Col size={5}>
+                            <View style={{width: 3}}/>
                             <Icon name={'chevron-down'} type={'Feather'}
                                   style={{fontSize: Fonts.size.h6, color: Colors.white}}/>
                         </Col>
@@ -39,22 +42,28 @@ export default class TradingBook extends Component {
                         </Col>
                     </Row>
                 </Grid>
-                <View
-                    style={{
-                        marginTop: 1,
-                        marginBottom: 1,
-                        borderBottomColor: Colors.colorPrimary,
-                        borderBottomWidth: 1,
-                    }}
-                />
+                <VerticalDivier />
                 <Grid>
                     <Row>
                         <Col>
                             <LeftSubHeader left={'TOTAL'} right={'PRICE'}/>
                             <TradingBookItemBuy/>
+                            <TradingBookItemBuy/>
+                            <TradingBookItemBuy/>
+                            <TradingBookItemBuy/>
+                            <TradingBookItemBuy/>
+                            <TradingBookItemBuy/>
+
                         </Col>
                         <Col>
                             <RightSubHeader left={'PRICE'} right={'TOTAL'}/>
+                            <TradingBookItemSell/>
+                            <TradingBookItemSell/>
+                            <TradingBookItemSell/>
+                            <TradingBookItemSell/>
+                            <TradingBookItemSell/>
+                            <TradingBookItemSell/>
+
                         </Col>
                     </Row>
                 </Grid>

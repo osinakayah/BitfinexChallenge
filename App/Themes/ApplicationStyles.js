@@ -1,4 +1,3 @@
-import Fonts from './Fonts'
 import Metrics from './Metrics'
 import Colors from './Colors'
 
@@ -11,43 +10,11 @@ const ApplicationStyles = {
       flex: 1,
       backgroundColor: Colors.background
     },
-    backgroundImage: {
-      position: 'absolute',
-      top: 0,
-      left: 0,
-      bottom: 0,
-      right: 0,
-      width: Metrics.screenWidth,
-      height: Metrics.screenHeight
-    },
-
     container: {
       flex: 1,
-      paddingTop: Metrics.baseMargin,
+      paddingTop: Metrics.marginVertical,
       backgroundColor: Colors.background
     },
-    section: {
-      margin: Metrics.section,
-      padding: Metrics.baseMargin
-    },
-    sectionText: {
-      ...Fonts.style.normal,
-      paddingVertical: Metrics.doubleBaseMargin,
-      color: Colors.snow,
-      marginVertical: Metrics.smallMargin,
-      textAlign: 'center'
-    },
-    subtitle: {
-      color: Colors.snow,
-      padding: Metrics.smallMargin,
-      marginBottom: Metrics.smallMargin,
-      marginHorizontal: Metrics.smallMargin
-    },
-    titleText: {
-      ...Fonts.style.h2,
-      fontSize: 14,
-      color: Colors.text
-    }
   }
 }
 

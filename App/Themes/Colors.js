@@ -2,7 +2,7 @@ const colors = {
   background: '#000000',
   white: '#fff',
   colorPrimary: '#484848',
-  colorPrimaryDarker: '#1C272B',
+  colorPrimaryDarker: '#1b262d',
   dullTextColor: '#99a0a5'
 }
 

@@ -37,7 +37,7 @@ const VolumeMetaComponent = () => {
         <Row>
             <Text style={{color: Colors.dullTextColor, fontSize: Fonts.size.small}}>VOL </Text>
             <Text style={{color: Colors.white, fontSize: Fonts.size.small}}>2919.99 </Text>
-            <Text style={{color: Colors.dullTextColor, fontSize: Fonts.size.small}}>BTC</Text>
+            <Text style={{color: Colors.dullTextColor, fontSize: Fonts.size.small, textDecorationLine: 'underline',}}>BTC</Text>
         </Row>
     )
 }
