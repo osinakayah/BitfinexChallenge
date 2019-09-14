@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import {Text, View, Button, Alert} from "react-native";
+import {View, Button} from "react-native";
+import i18n from '../Languages'
 
 export default  class LaunchScreen extends Component{
 
@@ -8,7 +9,7 @@ export default  class LaunchScreen extends Component{
         return (
             <View style={{marginTop: 30}}>
                 <Button
-                    title="Press Nora, what"
+                    title={i18n.t('completeProfile')}
                     onPress={() => {
 
                         this.props.navigation.navigate("LaunchScreen2")
