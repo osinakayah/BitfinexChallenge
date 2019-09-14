@@ -1,19 +1,42 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, {Component} from 'react';
+import { StyleSheet } from 'react-native';
+import { Provider } from 'react-redux'
+import createStore from './App/Redux'
+import RootContainer from './App/Containers/RootContainer'
+import { AppLoading } from 'expo';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-    </View>
-  );
+import * as Font from 'expo-font';
+// import { Ionicons } from '@expo/vector-icons';
+
+// create our store
+const store = createStore()
+
+
+export default  class App extends  Component{
+    constructor(props) {
+        super(props);
+        this.state = {
+            isReady: false,
+        };
+    }
+    async componentDidMount() {
+        await Font.loadAsync({
+            Roboto: require('native-base/Fonts/Roboto.ttf'),
+            Roboto_medium: require('native-base/Fonts/Roboto_medium.ttf'),
+        });
+        this.setState({ isReady: true });
+    }
+
+    render() {
+        if (!this.state.isReady) {
+            return <AppLoading />;
+        }
+        return (
+            <Provider store={store}>
+                <RootContainer/>
+            </Provider>
+        );
+    }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
